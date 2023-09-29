@@ -1,0 +1,8 @@
+## LOOP INFINITO
+## CUIDADO 
+## GUARDEN SU PROGRESO ANTES DE EJECUTAR
+## EL COMPUTADOR SE PUEDE PEGAR
+i = 1
+while i < 6:
+  print(i)
+  i = 1

@@ -1,0 +1,33 @@
+% Manejando videos
+v = VideoReader("Whisker_video1.mp4");
+
+% while hasFrame(v)
+%     vidFrame = readFrame(v);
+%     image(vidFrame)
+%     pause(1/v.FrameRate)
+% end
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%% Agregar titulo
+% Nframe=1;
+%  while hasFrame(v)
+%      vidFrame = readFrame(v);
+%      image(vidFrame)
+%      Nframe=Nframe+1;
+%      title(['Frame numero = ' num2str(Nframe)])
+%      pause(1/v.FrameRate)
+%  end
+
+%%%%%%%%%%%%%%% Seleccionar parte del video
+Nframe=1;
+while hasFrame(v)
+     vidFrame = readFrame(v);
+     Subframe=vidFrame(1:500,300:800,:);
+     SubframeBW=Subframe
+     image(Subframe)
+
+     Nframe=Nframe+1;
+     title(['Frame numero = ' num2str(Nframe)])
+     pause(1/v.FrameRate)
+end
+
